@@ -1,0 +1,3115 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/justmoon/node-bignum#readme">bignum (v0.12.5)</a>
+</h1>
+<h4>Arbitrary-precision integer arithmetic using OpenSSL</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bignum">module bignum</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.abs">
+            function <span class="apidocSignatureSpan">bignum.</span>abs
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.add">
+            function <span class="apidocSignatureSpan">bignum.</span>add
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.and">
+            function <span class="apidocSignatureSpan">bignum.</span>and
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.babs">
+            function <span class="apidocSignatureSpan">bignum.</span>babs
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.badd">
+            function <span class="apidocSignatureSpan">bignum.</span>badd
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.band">
+            function <span class="apidocSignatureSpan">bignum.</span>band
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.bcompare">
+            function <span class="apidocSignatureSpan">bignum.</span>bcompare
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.bdiv">
+            function <span class="apidocSignatureSpan">bignum.</span>bdiv
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.binvertm">
+            function <span class="apidocSignatureSpan">bignum.</span>binvertm
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.bitLength">
+            function <span class="apidocSignatureSpan">bignum.</span>bitLength
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.bmod">
+            function <span class="apidocSignatureSpan">bignum.</span>bmod
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.bmul">
+            function <span class="apidocSignatureSpan">bignum.</span>bmul
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.bneg">
+            function <span class="apidocSignatureSpan">bignum.</span>bneg
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.bor">
+            function <span class="apidocSignatureSpan">bignum.</span>bor
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.bpowm">
+            function <span class="apidocSignatureSpan">bignum.</span>bpowm
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.brand0">
+            function <span class="apidocSignatureSpan">bignum.</span>brand0
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.broot">
+            function <span class="apidocSignatureSpan">bignum.</span>broot
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.bsqrt">
+            function <span class="apidocSignatureSpan">bignum.</span>bsqrt
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.bsub">
+            function <span class="apidocSignatureSpan">bignum.</span>bsub
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.bxor">
+            function <span class="apidocSignatureSpan">bignum.</span>bxor
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.cmp">
+            function <span class="apidocSignatureSpan">bignum.</span>cmp
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.conditionArgs">
+            function <span class="apidocSignatureSpan">bignum.</span>conditionArgs
+            <span class="apidocSignatureSpan">(num, base)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.div">
+            function <span class="apidocSignatureSpan">bignum.</span>div
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.eq">
+            function <span class="apidocSignatureSpan">bignum.</span>eq
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.fromBuffer">
+            function <span class="apidocSignatureSpan">bignum.</span>fromBuffer
+            <span class="apidocSignatureSpan">(buf, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.gcd">
+            function <span class="apidocSignatureSpan">bignum.</span>gcd
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.ge">
+            function <span class="apidocSignatureSpan">bignum.</span>ge
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.gt">
+            function <span class="apidocSignatureSpan">bignum.</span>gt
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.invertm">
+            function <span class="apidocSignatureSpan">bignum.</span>invertm
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.isBigNum">
+            function <span class="apidocSignatureSpan">bignum.</span>isBigNum
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.isBitSet">
+            function <span class="apidocSignatureSpan">bignum.</span>isBitSet
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.isbitset">
+            function <span class="apidocSignatureSpan">bignum.</span>isbitset
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.jacobi">
+            function <span class="apidocSignatureSpan">bignum.</span>jacobi
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.le">
+            function <span class="apidocSignatureSpan">bignum.</span>le
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.lt">
+            function <span class="apidocSignatureSpan">bignum.</span>lt
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.mod">
+            function <span class="apidocSignatureSpan">bignum.</span>mod
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.mul">
+            function <span class="apidocSignatureSpan">bignum.</span>mul
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.ne">
+            function <span class="apidocSignatureSpan">bignum.</span>ne
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.neg">
+            function <span class="apidocSignatureSpan">bignum.</span>neg
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.nextPrime">
+            function <span class="apidocSignatureSpan">bignum.</span>nextPrime
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.or">
+            function <span class="apidocSignatureSpan">bignum.</span>or
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.pow">
+            function <span class="apidocSignatureSpan">bignum.</span>pow
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.powm">
+            function <span class="apidocSignatureSpan">bignum.</span>powm
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.prime">
+            function <span class="apidocSignatureSpan">bignum.</span>prime
+            <span class="apidocSignatureSpan">(bits, safe)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.probPrime">
+            function <span class="apidocSignatureSpan">bignum.</span>probPrime
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.probprime">
+            function <span class="apidocSignatureSpan">bignum.</span>probprime
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.rand">
+            function <span class="apidocSignatureSpan">bignum.</span>rand
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.root">
+            function <span class="apidocSignatureSpan">bignum.</span>root
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.scompare">
+            function <span class="apidocSignatureSpan">bignum.</span>scompare
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.setCompact">
+            function <span class="apidocSignatureSpan">bignum.</span>setCompact
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.shiftLeft">
+            function <span class="apidocSignatureSpan">bignum.</span>shiftLeft
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.shiftRight">
+            function <span class="apidocSignatureSpan">bignum.</span>shiftRight
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.sqrt">
+            function <span class="apidocSignatureSpan">bignum.</span>sqrt
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.sub">
+            function <span class="apidocSignatureSpan">bignum.</span>sub
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.toBuffer">
+            function <span class="apidocSignatureSpan">bignum.</span>toBuffer
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.toNumber">
+            function <span class="apidocSignatureSpan">bignum.</span>toNumber
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.tostring">
+            function <span class="apidocSignatureSpan">bignum.</span>tostring
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.uadd">
+            function <span class="apidocSignatureSpan">bignum.</span>uadd
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.ucompare">
+            function <span class="apidocSignatureSpan">bignum.</span>ucompare
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.udiv">
+            function <span class="apidocSignatureSpan">bignum.</span>udiv
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.udiv2exp">
+            function <span class="apidocSignatureSpan">bignum.</span>udiv2exp
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.umod">
+            function <span class="apidocSignatureSpan">bignum.</span>umod
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.umul">
+            function <span class="apidocSignatureSpan">bignum.</span>umul
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.umul2exp">
+            function <span class="apidocSignatureSpan">bignum.</span>umul2exp
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.upow">
+            function <span class="apidocSignatureSpan">bignum.</span>upow
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.upowm">
+            function <span class="apidocSignatureSpan">bignum.</span>upowm
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.uprime0">
+            function <span class="apidocSignatureSpan">bignum.</span>uprime0
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.usub">
+            function <span class="apidocSignatureSpan">bignum.</span>usub
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bignum.xor">
+            function <span class="apidocSignatureSpan">bignum.</span>xor
+            <span class="apidocSignatureSpan">(num)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bignum" id="apidoc.module.bignum">module bignum</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.abs" id="apidoc.element.bignum.abs">
+        function <span class="apidocSignatureSpan">bignum.</span>abs
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">abs = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Return a new `bignum` containing the instance value multiplied by `n`.
+
+.div(n)
+-------
+
+Return a new `bignum` containing the instance value integrally divided by `n`.
+
+.<span class="apidocCodeKeywordSpan">abs</span>()
+------
+
+Return a new `bignum` with the absolute value of the instance.
+
+.neg()
+------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.add" id="apidoc.element.bignum.add">
+        function <span class="apidocSignatureSpan">bignum.</span>add
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    endian : 'big',
+    size : 1, // number of bytes in each word
+}
+```
+
+Note that endian doesn't matter when size = 1. If you wish to reverse the entire buffer byte by byte, pass size: 'auto
+'.
+
+.<span class="apidocCodeKeywordSpan">add</span>(n)
+-------
+
+Return a new `bignum` containing the instance value plus `n`.
+
+.sub(n)
+-------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.and" id="apidoc.element.bignum.and">
+        function <span class="apidocSignatureSpan">bignum.</span>and
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">and = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+.le(n)
+------
+
+Return a boolean: whether the instance value is less than or equal to n
+(`&lt;= n`).
+
+.<span class="apidocCodeKeywordSpan">and</span>(n)
+-------
+
+Return a new `bignum` with the instance value bitwise AND (&amp;)-ed with `n`.
+
+.or(n)
+------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.babs" id="apidoc.element.bignum.babs">
+        function <span class="apidocSignatureSpan">bignum.</span>babs
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">babs = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      throw new TypeError('Unspecified operation for type ' +
+        (typeof num) + ' for ' + op)
+    }
+  }
+})
+
+BigNum.prototype.abs = function () {
+  return this.<span class="apidocCodeKeywordSpan">babs</span>()
+}
+
+BigNum.prototype.neg = function () {
+  return this.bneg()
+}
+
+BigNum.prototype.powm = function (num, mod) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.badd" id="apidoc.element.bignum.badd">
+        function <span class="apidocSignatureSpan">bignum.</span>badd
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">badd = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.band" id="apidoc.element.bignum.band">
+        function <span class="apidocSignatureSpan">bignum.</span>band
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">band = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.bcompare" id="apidoc.element.bignum.bcompare">
+        function <span class="apidocSignatureSpan">bignum.</span>bcompare
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bcompare = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var x = parseInt(num.toString(), 10)
+  return BigNum.prototype.shiftRight.call(this, x)
+}
+}
+
+BigNum.prototype.cmp = function (num) {
+if (BigNum.isBigNum(num)) {
+  return this.<span class="apidocCodeKeywordSpan">bcompare</span>(num)
+} else if (typeof num === 'number') {
+  if (num &lt; 0) {
+    return this.scompare(num)
+  } else {
+    return this.ucompare(num)
+  }
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.bdiv" id="apidoc.element.bignum.bdiv">
+        function <span class="apidocSignatureSpan">bignum.</span>bdiv
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bdiv = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.binvertm" id="apidoc.element.bignum.binvertm">
+        function <span class="apidocSignatureSpan">bignum.</span>binvertm
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">binvertm = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     : BigNum(to).sub(this)
+    return x.brand0().add(this)
+  }
+}
+
+BigNum.prototype.invertm = function (mod) {
+  if (BigNum.isBigNum(mod)) {
+    return this.<span class="apidocCodeKeywordSpan">binvertm</span>(mod)
+  } else {
+    var x = BigNum(mod)
+    return this.binvertm(x)
+  }
+}
+
+BigNum.prime = function (bits, safe) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.bitLength" id="apidoc.element.bignum.bitLength">
+        function <span class="apidocSignatureSpan">bignum.</span>bitLength
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bitLength = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+-------
+
+Return the Jacobi symbol (or Legendre symbol if `n` is prime) of the current
+`bignum` (= a) over `n`. Note that `n` must be odd and &gt;= 3. 0 &lt;= a &lt; n.
+
+Returns -1 or 1 as an int (NOT a bignum). Throws an error on failure.
+
+.<span class="apidocCodeKeywordSpan">bitLength</span>()
+------------
+
+Return the number of bits used to represent the current `bignum`.
+
+install
+=======
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.bmod" id="apidoc.element.bignum.bmod">
+        function <span class="apidocSignatureSpan">bignum.</span>bmod
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bmod = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  m = mod
+}
+
+if ((typeof num) === 'number') {
+  return this.umod(num, m)
+} else if ((typeof num) === 'string') {
+  var n = BigNum(num)
+  return this.<span class="apidocCodeKeywordSpan">bmod</span>(n, m)
+} else if (BigNum.isBigNum(num)) {
+  return this.bmod(num, m)
+}
+}
+
+BigNum.prototype.pow = function (num) {
+if (typeof num === 'number') {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.bmul" id="apidoc.element.bignum.bmul">
+        function <span class="apidocSignatureSpan">bignum.</span>bmul
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bmul = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.bneg" id="apidoc.element.bignum.bneg">
+        function <span class="apidocSignatureSpan">bignum.</span>bneg
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bneg = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+})
+
+BigNum.prototype.abs = function () {
+return this.babs()
+}
+
+BigNum.prototype.neg = function () {
+return this.<span class="apidocCodeKeywordSpan">bneg</span>()
+}
+
+BigNum.prototype.powm = function (num, mod) {
+var m
+
+if ((typeof mod) === 'number' || (typeof mod) === 'string') {
+  m = BigNum(mod)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.bor" id="apidoc.element.bignum.bor">
+        function <span class="apidocSignatureSpan">bignum.</span>bor
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bor = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.bpowm" id="apidoc.element.bignum.bpowm">
+        function <span class="apidocSignatureSpan">bignum.</span>bpowm
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bpowm = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  m = mod
+}
+
+if ((typeof num) === 'number') {
+  return this.upowm(num, m)
+} else if ((typeof num) === 'string') {
+  var n = BigNum(num)
+  return this.<span class="apidocCodeKeywordSpan">bpowm</span>(n, m)
+} else if (BigNum.isBigNum(num)) {
+  return this.bpowm(num, m)
+}
+}
+
+BigNum.prototype.mod = function (num, mod) {
+var m
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.brand0" id="apidoc.element.bignum.brand0">
+        function <span class="apidocSignatureSpan">bignum.</span>brand0
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">brand0 = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+BigNum.prototype.rand = function (to) {
+if (to === undefined) {
+  if (this.toString() === '1') {
+    return BigNum(0)
+  } else {
+    return this.<span class="apidocCodeKeywordSpan">brand0</span>()
+  }
+} else {
+  var x = BigNum.isBigNum(to)
+    ? to.sub(this)
+   : BigNum(to).sub(this)
+  return x.brand0().add(this)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.broot" id="apidoc.element.bignum.broot">
+        function <span class="apidocSignatureSpan">bignum.</span>broot
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">broot = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+BigNum.prototype.sqrt = function () {
+return this.bsqrt()
+}
+
+BigNum.prototype.root = function (num) {
+if (BigNum.isBigNum(num)) {
+  return this.<span class="apidocCodeKeywordSpan">broot</span>(num)
+} else {
+  return this.broot(num)
+}
+}
+
+BigNum.prototype.rand = function (to) {
+if (to === undefined) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.bsqrt" id="apidoc.element.bignum.bsqrt">
+        function <span class="apidocSignatureSpan">bignum.</span>bsqrt
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bsqrt = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var x = BigNum(num)
+    return this['b' + name](x)
+  }
+}
+})
+
+BigNum.prototype.sqrt = function () {
+return this.<span class="apidocCodeKeywordSpan">bsqrt</span>()
+}
+
+BigNum.prototype.root = function (num) {
+if (BigNum.isBigNum(num)) {
+  return this.broot(num)
+} else {
+  return this.broot(num)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.bsub" id="apidoc.element.bignum.bsub">
+        function <span class="apidocSignatureSpan">bignum.</span>bsub
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bsub = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.bxor" id="apidoc.element.bignum.bxor">
+        function <span class="apidocSignatureSpan">bignum.</span>bxor
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bxor = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.cmp" id="apidoc.element.bignum.cmp">
+        function <span class="apidocSignatureSpan">bignum.</span>cmp
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cmp = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Return a new `bignum` with the absolute value of the instance.
+
+.neg()
+------
+
+Return a new `bignum` with the negative of the instance value.
+
+.<span class="apidocCodeKeywordSpan">cmp</span>(n)
+-------
+
+Compare the instance value to `n`. Return a positive integer if `&gt; n`, a
+negative integer if `&lt; n`, and 0 if `== n`.
+
+.gt(n)
+------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.conditionArgs" id="apidoc.element.bignum.conditionArgs">
+        function <span class="apidocSignatureSpan">bignum.</span>conditionArgs
+        <span class="apidocSignatureSpan">(num, base)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">conditionArgs = function (num, base) {
+  if (typeof num !== 'string') num = num.toString(base || 10)
+
+  if (num.match(/e\+/)) { // positive exponent
+    if (!Number(num).toString().match(/e+/)) {
+      return {
+        num: Math.floor(Number(num)).toString(),
+        base: 10
+      }
+    } else {
+      var pow = Math.ceil(Math.log(num) / Math.log(2))
+      var n = (num / Math.pow(2, pow)).toString(2)
+        .replace(/^0/, '')
+      var i = n.length - n.indexOf('.')
+      n = n.replace(/\./, '')
+
+      for (; i &lt;= pow; i++) n += '0'
+      return {
+        num: n,
+        base: 2
+      }
+    }
+  } else if (num.match(/e\-/)) { // negative exponent
+    return {
+      num: Math.floor(Number(num)).toString(),
+      base: base || 10
+    }
+  } else {
+    return {
+      num: num,
+      base: base || 10
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.div" id="apidoc.element.bignum.div">
+        function <span class="apidocSignatureSpan">bignum.</span>div
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">div = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+---------
+
+```js
+var bignum = require('bignum');
+
+var b = bignum('782910138827292261791972728324982')
+.sub('182373273283402171237474774728373')
+.<span class="apidocCodeKeywordSpan">div</span>(8)
+;
+console.log(b);
+```
+
+***
+$ node simple.js
+&lt;Bignum 75067108192986261319312244199576&gt;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.eq" id="apidoc.element.bignum.eq">
+        function <span class="apidocSignatureSpan">bignum.</span>eq
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">eq = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+.ge(n)
+------
+
+Return a boolean: whether the instance value is greater than or equal to n
+(`&gt;= n`).
+
+.<span class="apidocCodeKeywordSpan">eq</span>(n)
+------
+
+Return a boolean: whether the instance value is equal to n (`== n`).
+
+.lt(n)
+------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.fromBuffer" id="apidoc.element.bignum.fromBuffer">
+        function <span class="apidocSignatureSpan">bignum.</span>fromBuffer
+        <span class="apidocSignatureSpan">(buf, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromBuffer = function (buf, opts) {
+  if (!opts) opts = {}
+
+  var endian = { 1: 'big', '-1': 'little' }[opts.endian] ||
+    opts.endian || 'big'
+
+  var size = opts.size === 'auto' ? Math.ceil(buf.length) : (opts.size || 1)
+
+  if (buf.length % size !== 0) {
+    throw new RangeError('Buffer length (' + buf.length + ')' +
+      ' must be a multiple of size (' + size + ')'
+    )
+  }
+
+  var hex = []
+  for (var i = 0; i &lt; buf.length; i += size) {
+    var chunk = []
+    for (var j = 0; j &lt; size; j++) {
+      chunk.push(buf[i + (endian === 'big' ? j : (size - j - 1))])
+    }
+
+    hex.push(chunk
+      .map(function (c) {
+        return (c &lt; 16 ? '0' : '') + c.toString(16)
+      })
+      .join('')
+    )
+  }
+
+  return BigNum(hex.join(''), 16)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+If you pass in a string you can set the base that string is encoded in.
+
+.toString(base=10)
+------------------
+
+Print out the `bignum` instance in the requested base as a string.
+
+bignum.<span class="apidocCodeKeywordSpan">fromBuffer</span>(buf, opts)
+----------------------------
+
+Create a new `bignum` from a `Buffer`.
+
+The default options are:
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.gcd" id="apidoc.element.bignum.gcd">
+        function <span class="apidocSignatureSpan">bignum.</span>gcd
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gcd = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+.shiftRight(n)
+--------------
+
+Return a new `bignum` of the value integer divided by
+`2^n`. Equivalent of the `&gt;&gt;` operator.
+
+.<span class="apidocCodeKeywordSpan">gcd</span>(n)
+-------
+
+Return the greatest common divisor of the current `bignum` with `n` as a new
+`bignum`.
+
+.jacobi(n)
+-------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.ge" id="apidoc.element.bignum.ge">
+        function <span class="apidocSignatureSpan">bignum.</span>ge
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ge = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+negative integer if `&lt; n`, and 0 if `== n`.
+
+.gt(n)
+------
+
+Return a boolean: whether the instance value is greater than n (`&gt; n`).
+
+.<span class="apidocCodeKeywordSpan">ge</span>(n)
+------
+
+Return a boolean: whether the instance value is greater than or equal to n
+(`&gt;= n`).
+
+.eq(n)
+------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.gt" id="apidoc.element.bignum.gt">
+        function <span class="apidocSignatureSpan">bignum.</span>gt
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gt = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+.cmp(n)
+-------
+
+Compare the instance value to `n`. Return a positive integer if `&gt; n`, a
+negative integer if `&lt; n`, and 0 if `== n`.
+
+.<span class="apidocCodeKeywordSpan">gt</span>(n)
+------
+
+Return a boolean: whether the instance value is greater than n (`&gt; n`).
+
+.ge(n)
+------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.invertm" id="apidoc.element.bignum.invertm">
+        function <span class="apidocSignatureSpan">bignum.</span>invertm
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">invertm = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+.powm(n, m)
+-----------
+
+Return a new `bignum` with the instance value raised to the `n`th power modulo
+`m`.
+
+.<span class="apidocCodeKeywordSpan">invertm</span>(m)
+-----------
+
+Compute the multiplicative inverse modulo `m`.
+
+.rand()
+-------
+.rand(upperBound)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.isBigNum" id="apidoc.element.bignum.isBigNum">
+        function <span class="apidocSignatureSpan">bignum.</span>isBigNum
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isBigNum = function (num) {
+  if (!num) {
+    return false
+  }
+  for (var key in BigNum.prototype) {
+    if (!num[key]) {
+      return false
+    }
+  }
+  return true
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Note that endian doesn't matter when size = 1. If you wish to reverse the entire buffer byte by byte, pass size: 'auto
+'.
+
+bignum.prime(bits, safe=true)
+-----------------------------
+
+Generate a probable prime of length `bits`. If `safe` is true, it will be a "safe" prime of the form p=2p'+1 where
+ p' is also prime.
+
+bignum.<span class="apidocCodeKeywordSpan">isBigNum</span>(num)
+-----------------------------
+
+Return true if `num` is identified as a bignum instance. Otherwise, return false.
+
+methods[1]
+==========
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.isBitSet" id="apidoc.element.bignum.isBitSet">
+        function <span class="apidocSignatureSpan">bignum.</span>isBitSet
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isBitSet = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.isbitset" id="apidoc.element.bignum.isbitset">
+        function <span class="apidocSignatureSpan">bignum.</span>isbitset
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isbitset = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+do {
+  num = num.add(1)
+} while (!num.probPrime())
+return num
+}
+
+BigNum.prototype.isBitSet = function (n) {
+return this.<span class="apidocCodeKeywordSpan">isbitset</span>(n) === 1
+}
+
+BigNum.fromBuffer = function (buf, opts) {
+if (!opts) opts = {}
+
+var endian = { 1: 'big', '-1': 'little' }[opts.endian] ||
+  opts.endian || 'big'
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.jacobi" id="apidoc.element.bignum.jacobi">
+        function <span class="apidocSignatureSpan">bignum.</span>jacobi
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jacobi = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+.gcd(n)
+-------
+
+Return the greatest common divisor of the current `bignum` with `n` as a new
+`bignum`.
+
+.<span class="apidocCodeKeywordSpan">jacobi</span>(n)
+-------
+
+Return the Jacobi symbol (or Legendre symbol if `n` is prime) of the current
+`bignum` (= a) over `n`. Note that `n` must be odd and &gt;= 3. 0 &lt;= a &lt; n.
+
+Returns -1 or 1 as an int (NOT a bignum). Throws an error on failure.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.le" id="apidoc.element.bignum.le">
+        function <span class="apidocSignatureSpan">bignum.</span>le
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">le = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Return a boolean: whether the instance value is equal to n (`== n`).
+
+.lt(n)
+------
+
+Return a boolean: whether the instance value is less than n (`&lt; n`).
+
+.<span class="apidocCodeKeywordSpan">le</span>(n)
+------
+
+Return a boolean: whether the instance value is less than or equal to n
+(`&lt;= n`).
+
+.and(n)
+-------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.lt" id="apidoc.element.bignum.lt">
+        function <span class="apidocSignatureSpan">bignum.</span>lt
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lt = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(`&gt;= n`).
+
+.eq(n)
+------
+
+Return a boolean: whether the instance value is equal to n (`== n`).
+
+.<span class="apidocCodeKeywordSpan">lt</span>(n)
+------
+
+Return a boolean: whether the instance value is less than n (`&lt; n`).
+
+.le(n)
+------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.mod" id="apidoc.element.bignum.mod">
+        function <span class="apidocSignatureSpan">bignum.</span>mod
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mod = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+.xor(n)
+-------
+
+Return a new `bignum` with the instance value bitwise exclusive-OR (^)-ed with
+`n`.
+
+.<span class="apidocCodeKeywordSpan">mod</span>(n)
+-------
+
+Return a new `bignum` with the instance value modulo `n`.
+
+`m`.
+.pow(n)
+-------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.mul" id="apidoc.element.bignum.mul">
+        function <span class="apidocSignatureSpan">bignum.</span>mul
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mul = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+// If 2**n-1 is prime, then (2**n-1) * 2**(n-1) is perfect.
+var bignum = require('bignum');
+
+for (var n = 0; n &lt; 100; n++) {
+    var p = bignum.pow(2, n).sub(1);
+    if (p.probPrime(50)) {
+        var perfect = p.<span class="apidocCodeKeywordSpan">mul</span>(bignum.pow(2, n - 1));
+        console.log(perfect.toString());
+    }
+}
+```
+
+***
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.ne" id="apidoc.element.bignum.ne">
+        function <span class="apidocSignatureSpan">bignum.</span>ne
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ne = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.neg" id="apidoc.element.bignum.neg">
+        function <span class="apidocSignatureSpan">bignum.</span>neg
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">neg = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Return a new `bignum` containing the instance value integrally divided by `n`.
+
+.abs()
+------
+
+Return a new `bignum` with the absolute value of the instance.
+
+.<span class="apidocCodeKeywordSpan">neg</span>()
+------
+
+Return a new `bignum` with the negative of the instance value.
+
+.cmp(n)
+-------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.nextPrime" id="apidoc.element.bignum.nextPrime">
+        function <span class="apidocSignatureSpan">bignum.</span>nextPrime
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nextPrime = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.or" id="apidoc.element.bignum.or">
+        function <span class="apidocSignatureSpan">bignum.</span>or
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">or = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+(`&lt;= n`).
+
+.and(n)
+-------
+
+Return a new `bignum` with the instance value bitwise AND (&amp;)-ed with `n`.
+
+.<span class="apidocCodeKeywordSpan">or</span>(n)
+------
+
+Return a new `bignum` with the instance value bitwise inclusive-OR (|)-ed with
+`n`.
+
+.xor(n)
+-------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.pow" id="apidoc.element.bignum.pow">
+        function <span class="apidocSignatureSpan">bignum.</span>pow
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pow = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Generate the perfect numbers:
+
+```js
+// If 2**n-1 is prime, then (2**n-1) * 2**(n-1) is perfect.
+var bignum = require('bignum');
+
+for (var n = 0; n &lt; 100; n++) {
+    var p = bignum.<span class="apidocCodeKeywordSpan">pow</span>(2, n).sub(1);
+    if (p.probPrime(50)) {
+        var perfect = p.mul(bignum.pow(2, n - 1));
+        console.log(perfect.toString());
+    }
+}
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.powm" id="apidoc.element.bignum.powm">
+        function <span class="apidocSignatureSpan">bignum.</span>powm
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">powm = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+`m`.
+.pow(n)
+-------
+
+Return a new `bignum` with the instance value raised to the `n`th power.
+
+.<span class="apidocCodeKeywordSpan">powm</span>(n, m)
+-----------
+
+Return a new `bignum` with the instance value raised to the `n`th power modulo
+`m`.
+
+.invertm(m)
+-----------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.prime" id="apidoc.element.bignum.prime">
+        function <span class="apidocSignatureSpan">bignum.</span>prime
+        <span class="apidocSignatureSpan">(bits, safe)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prime = function (bits, safe) {
+  if (typeof safe === 'undefined') {
+    safe = true
+  }
+
+  // Force uint32
+  bits &gt;&gt;&gt;= 0
+
+  return BigNum.uprime0(bits, !!safe)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    endian : 'big',
+    size : 1, // number of bytes in each word
+}
+```
+
+Note that endian doesn't matter when size = 1. If you wish to reverse the entire buffer byte by byte, pass size: 'auto
+'.
+
+bignum.<span class="apidocCodeKeywordSpan">prime</span>(bits, safe=true)
+-----------------------------
+
+Generate a probable prime of length `bits`. If `safe` is true, it will be a "safe" prime of the form p=2p'+1 where
+ p' is also prime.
+
+bignum.isBigNum(num)
+-----------------------------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.probPrime" id="apidoc.element.bignum.probPrime">
+        function <span class="apidocSignatureSpan">bignum.</span>probPrime
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">probPrime = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+// If 2**n-1 is prime, then (2**n-1) * 2**(n-1) is perfect.
+var bignum = require('bignum');
+
+for (var n = 0; n &lt; 100; n++) {
+    var p = bignum.pow(2, n).sub(1);
+    if (p.<span class="apidocCodeKeywordSpan">probPrime</span>(50)) {
+        var perfect = p.mul(bignum.pow(2, n - 1));
+        console.log(perfect.toString());
+    }
+}
+```
+
+***
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.probprime" id="apidoc.element.bignum.probprime">
+        function <span class="apidocSignatureSpan">bignum.</span>probprime
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">probprime = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Force uint32
+bits &gt;&gt;&gt;= 0
+
+return BigNum.uprime0(bits, !!safe)
+}
+
+BigNum.prototype.probPrime = function (reps) {
+var n = this.<span class="apidocCodeKeywordSpan">probprime</span>(reps || 10)
+return { 1: true, 0: false }[n]
+}
+
+BigNum.prototype.nextPrime = function () {
+var num = this
+do {
+  num = num.add(1)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.rand" id="apidoc.element.bignum.rand">
+        function <span class="apidocSignatureSpan">bignum.</span>rand
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rand = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+`m`.
+
+.invertm(m)
+-----------
+
+Compute the multiplicative inverse modulo `m`.
+
+.<span class="apidocCodeKeywordSpan">rand</span>()
+-------
+.rand(upperBound)
+-----------------
+
+If `upperBound` is supplied, return a random `bignum` between the instance value
+and `upperBound - 1`, inclusive.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.root" id="apidoc.element.bignum.root">
+        function <span class="apidocSignatureSpan">bignum.</span>root
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">root = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+using [BN_is_prime_ex](http://www.openssl.org/docs/crypto/BN_generate_prime.html).
+
+.sqrt()
+-------
+
+Return a new `bignum` that is the square root. This truncates.
+
+.<span class="apidocCodeKeywordSpan">root</span>(n)
+-------
+
+Return a new `bignum` that is the `nth` root. This truncates.
+
+.shiftLeft(n)
+-------------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.scompare" id="apidoc.element.bignum.scompare">
+        function <span class="apidocSignatureSpan">bignum.</span>scompare
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scompare = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+BigNum.prototype.cmp = function (num) {
+if (BigNum.isBigNum(num)) {
+  return this.bcompare(num)
+} else if (typeof num === 'number') {
+  if (num &lt; 0) {
+    return this.<span class="apidocCodeKeywordSpan">scompare</span>(num)
+  } else {
+    return this.ucompare(num)
+  }
+} else {
+  var x = BigNum(num)
+  return this.bcompare(x)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.setCompact" id="apidoc.element.bignum.setCompact">
+        function <span class="apidocSignatureSpan">bignum.</span>setCompact
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setCompact = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.shiftLeft" id="apidoc.element.bignum.shiftLeft">
+        function <span class="apidocSignatureSpan">bignum.</span>shiftLeft
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shiftLeft = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Return a new `bignum` that is the square root. This truncates.
+
+.root(n)
+-------
+
+Return a new `bignum` that is the `nth` root. This truncates.
+
+.<span class="apidocCodeKeywordSpan">shiftLeft</span>(n)
+-------------
+
+Return a new `bignum` that is the `2^n` multiple. Equivalent of the `&lt;&lt;`
+operator.
+
+.shiftRight(n)
+--------------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.shiftRight" id="apidoc.element.bignum.shiftRight">
+        function <span class="apidocSignatureSpan">bignum.</span>shiftRight
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shiftRight = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+.shiftLeft(n)
+-------------
+
+Return a new `bignum` that is the `2^n` multiple. Equivalent of the `&lt;&lt;`
+operator.
+
+.<span class="apidocCodeKeywordSpan">shiftRight</span>(n)
+--------------
+
+Return a new `bignum` of the value integer divided by
+`2^n`. Equivalent of the `&gt;&gt;` operator.
+
+.gcd(n)
+-------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.sqrt" id="apidoc.element.bignum.sqrt">
+        function <span class="apidocSignatureSpan">bignum.</span>sqrt
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sqrt = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* certainly prime (true)
+* probably prime ('maybe')
+* certainly composite (false)
+
+using [BN_is_prime_ex](http://www.openssl.org/docs/crypto/BN_generate_prime.html).
+
+.<span class="apidocCodeKeywordSpan">sqrt</span>()
+-------
+
+Return a new `bignum` that is the square root. This truncates.
+
+.root(n)
+-------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.sub" id="apidoc.element.bignum.sub">
+        function <span class="apidocSignatureSpan">bignum.</span>sub
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sub = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+simple.js
+---------
+
+```js
+var bignum = require('bignum');
+
+var b = bignum('782910138827292261791972728324982')
+.<span class="apidocCodeKeywordSpan">sub</span>('182373273283402171237474774728373')
+.div(8)
+;
+console.log(b);
+```
+
+***
+$ node simple.js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.toBuffer" id="apidoc.element.bignum.toBuffer">
+        function <span class="apidocSignatureSpan">bignum.</span>toBuffer
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBuffer = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+.toNumber()
+-----------
+
+Turn a `bignum` into a `Number`. If the `bignum` is too big you'll lose
+precision or you'll get Â±`Infinity`.
+
+.<span class="apidocCodeKeywordSpan">toBuffer</span>(opts)
+-------------
+
+Return a new `Buffer` with the data from the `bignum`.
+
+The default options are:
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.toNumber" id="apidoc.element.bignum.toNumber">
+        function <span class="apidocSignatureSpan">bignum.</span>toNumber
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toNumber = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+or if x is a `bignum` instance``
+
+```js
+x.method(y, z)
+```
+
+.<span class="apidocCodeKeywordSpan">toNumber</span>()
+-----------
+
+Turn a `bignum` into a `Number`. If the `bignum` is too big you'll lose
+precision or you'll get Â±`Infinity`.
+
+.toBuffer(opts)
+-------------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.tostring" id="apidoc.element.bignum.tostring">
+        function <span class="apidocSignatureSpan">bignum.</span>tostring
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tostring = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+BigNum.prototype.inspect = function () {
+return '&lt;BigNum ' + this.toString(10) + '&gt;'
+}
+
+BigNum.prototype.toString = function (base) {
+var value
+if (base) {
+  value = this.<span class="apidocCodeKeywordSpan">tostring</span>(base)
+} else {
+  value = this.tostring()
+}
+if (base &gt; 10 &amp;&amp; typeof value === 'string') {
+  value = value.toLowerCase()
+}
+return value
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.uadd" id="apidoc.element.bignum.uadd">
+        function <span class="apidocSignatureSpan">bignum.</span>uadd
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">uadd = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return this['b' + op](num)
+} else if (typeof num === 'number') {
+  if (num &gt;= 0) {
+    return this['u' + op](num)
+  } else if (op === 'add') {
+    return this.usub(-num)
+  } else if (op === 'sub') {
+    return this.<span class="apidocCodeKeywordSpan">uadd</span>(-num)
+  } else {
+    x = BigNum(num)
+    return this['b' + op](x)
+  }
+} else if (typeof num === 'string') {
+  x = BigNum(num)
+  return this['b' + op](x)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.ucompare" id="apidoc.element.bignum.ucompare">
+        function <span class="apidocSignatureSpan">bignum.</span>ucompare
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ucompare = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+BigNum.prototype.cmp = function (num) {
+  if (BigNum.isBigNum(num)) {
+    return this.bcompare(num)
+  } else if (typeof num === 'number') {
+    if (num &lt; 0) {
+      return this.scompare(num)
+    } else {
+      return this.<span class="apidocCodeKeywordSpan">ucompare</span>(num)
+    }
+  } else {
+    var x = BigNum(num)
+    return this.bcompare(x)
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.udiv" id="apidoc.element.bignum.udiv">
+        function <span class="apidocSignatureSpan">bignum.</span>udiv
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">udiv = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.udiv2exp" id="apidoc.element.bignum.udiv2exp">
+        function <span class="apidocSignatureSpan">bignum.</span>udiv2exp
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">udiv2exp = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return BigNum.prototype.shiftLeft.call(this, x)
+}
+}
+
+BigNum.prototype.shiftRight = function (num) {
+if (typeof num === 'number') {
+  if (num &gt;= 0) {
+    return this.<span class="apidocCodeKeywordSpan">udiv2exp</span>(num)
+  } else {
+    return this.shiftLeft(-num)
+  }
+} else {
+  var x = parseInt(num.toString(), 10)
+  return BigNum.prototype.shiftRight.call(this, x)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.umod" id="apidoc.element.bignum.umod">
+        function <span class="apidocSignatureSpan">bignum.</span>umod
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">umod = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if ((typeof mod) === 'number' || (typeof mod) === 'string') {
+    m = BigNum(mod)
+  } else if (BigNum.isBigNum(mod)) {
+    m = mod
+  }
+
+  if ((typeof num) === 'number') {
+    return this.<span class="apidocCodeKeywordSpan">umod</span>(num, m)
+  } else if ((typeof num) === 'string') {
+    var n = BigNum(num)
+    return this.bmod(n, m)
+  } else if (BigNum.isBigNum(num)) {
+    return this.bmod(num, m)
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.umul" id="apidoc.element.bignum.umul">
+        function <span class="apidocSignatureSpan">bignum.</span>umul
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">umul = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.umul2exp" id="apidoc.element.bignum.umul2exp">
+        function <span class="apidocSignatureSpan">bignum.</span>umul2exp
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">umul2exp = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return BigNum.prototype.pow.call(this, x)
+}
+}
+
+BigNum.prototype.shiftLeft = function (num) {
+if (typeof num === 'number') {
+  if (num &gt;= 0) {
+    return this.<span class="apidocCodeKeywordSpan">umul2exp</span>(num)
+  } else {
+    return this.shiftRight(-num)
+  }
+} else {
+  var x = parseInt(num.toString(), 10)
+  return BigNum.prototype.shiftLeft.call(this, x)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.upow" id="apidoc.element.bignum.upow">
+        function <span class="apidocSignatureSpan">bignum.</span>upow
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">upow = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return this.bmod(num, m)
+}
+}
+
+BigNum.prototype.pow = function (num) {
+if (typeof num === 'number') {
+  if (num &gt;= 0) {
+    return this.<span class="apidocCodeKeywordSpan">upow</span>(num)
+  } else {
+    return BigNum.prototype.powm.call(this, num, this)
+  }
+} else {
+  var x = parseInt(num.toString(), 10)
+  return BigNum.prototype.pow.call(this, x)
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.upowm" id="apidoc.element.bignum.upowm">
+        function <span class="apidocSignatureSpan">bignum.</span>upowm
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">upowm = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if ((typeof mod) === 'number' || (typeof mod) === 'string') {
+    m = BigNum(mod)
+  } else if (BigNum.isBigNum(mod)) {
+    m = mod
+  }
+
+  if ((typeof num) === 'number') {
+    return this.<span class="apidocCodeKeywordSpan">upowm</span>(num, m)
+  } else if ((typeof num) === 'string') {
+    var n = BigNum(num)
+    return this.bpowm(n, m)
+  } else if (BigNum.isBigNum(num)) {
+    return this.bpowm(num, m)
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.uprime0" id="apidoc.element.bignum.uprime0">
+        function <span class="apidocSignatureSpan">bignum.</span>uprime0
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function uprime0() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (typeof safe === 'undefined') {
+    safe = true
+  }
+
+  // Force uint32
+  bits &gt;&gt;&gt;= 0
+
+  return BigNum.<span class="apidocCodeKeywordSpan">uprime0</span>(bits, !!safe)
+}
+
+BigNum.prototype.probPrime = function (reps) {
+  var n = this.probprime(reps || 10)
+  return { 1: true, 0: false }[n]
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.usub" id="apidoc.element.bignum.usub">
+        function <span class="apidocSignatureSpan">bignum.</span>usub
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">usub = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var x
+if (BigNum.isBigNum(num)) {
+  return this['b' + op](num)
+} else if (typeof num === 'number') {
+  if (num &gt;= 0) {
+    return this['u' + op](num)
+  } else if (op === 'add') {
+    return this.<span class="apidocCodeKeywordSpan">usub</span>(-num)
+  } else if (op === 'sub') {
+    return this.uadd(-num)
+  } else {
+    x = BigNum(num)
+    return this['b' + op](x)
+  }
+} else if (typeof num === 'string') {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bignum.xor" id="apidoc.element.bignum.xor">
+        function <span class="apidocSignatureSpan">bignum.</span>xor
+        <span class="apidocSignatureSpan">(num)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">xor = function (num) {
+  var args = [].slice.call(arguments, 1)
+
+  if (BigNum.isBigNum(num)) {
+    return num[name].apply(num, args)
+  } else {
+    var bigi = BigNum(num)
+    return bigi[name].apply(bigi, args)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+.or(n)
+------
+
+Return a new `bignum` with the instance value bitwise inclusive-OR (|)-ed with
+`n`.
+
+.<span class="apidocCodeKeywordSpan">xor</span>(n)
+-------
+
+Return a new `bignum` with the instance value bitwise exclusive-OR (^)-ed with
+`n`.
+
+.mod(n)
+-------
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
