@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/bignum.png?downloads=true)](https://www.npmjs.com/package/bignum)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-bignum/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-bignum%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-bignum/build/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-bignum/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-bignum%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-bignum/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-bignum/build/screenCapture.npmPackageListing.svg)
 
