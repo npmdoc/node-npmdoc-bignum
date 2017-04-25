@@ -1,6 +1,6 @@
 # npmdoc-bignum
 
-#### api documentation for  [bignum (v0.12.5)](https://github.com/justmoon/node-bignum#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-bignum.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-bignum) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-bignum.svg)](https://travis-ci.org/npmdoc/node-npmdoc-bignum)
+#### basic api documentation for  [bignum (v0.12.5)](https://github.com/justmoon/node-bignum#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-bignum.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-bignum) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-bignum.svg)](https://travis-ci.org/npmdoc/node-npmdoc-bignum)
 
 #### Arbitrary-precision integer arithmetic using OpenSSL
 
@@ -92,7 +92,8 @@
         "install": "node-pre-gyp install --fallback-to-build",
         "test": "standard && tap test/*.js"
     },
-    "version": "0.12.5"
+    "version": "0.12.5",
+    "bin": {}
 }
 ```
 
