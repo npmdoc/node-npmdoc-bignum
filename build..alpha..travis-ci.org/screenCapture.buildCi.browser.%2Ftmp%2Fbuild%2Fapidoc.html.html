@@ -722,22 +722,7 @@
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-Return a new `bignum` containing the instance value multiplied by `n`.
-
-.div(n)
--------
-
-Return a new `bignum` containing the instance value integrally divided by `n`.
-
-.<span class="apidocCodeKeywordSpan">abs</span>()
-------
-
-Return a new `bignum` with the absolute value of the instance.
-
-.neg()
-------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -759,23 +744,7 @@ Return a new `bignum` with the absolute value of the instance.
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    endian : 'big',
-    size : 1, // number of bytes in each word
-}
-```
-
-Note that endian doesn't matter when size = 1. If you wish to reverse the entire buffer byte by byte, pass size: 'auto
-'.
-
-.<span class="apidocCodeKeywordSpan">add</span>(n)
--------
-
-Return a new `bignum` containing the instance value plus `n`.
-
-.sub(n)
--------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -797,22 +766,7 @@ Return a new `bignum` containing the instance value plus `n`.
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-.le(n)
-------
-
-Return a boolean: whether the instance value is less than or equal to n
-(`&lt;= n`).
-
-.<span class="apidocCodeKeywordSpan">and</span>(n)
--------
-
-Return a new `bignum` with the instance value bitwise AND (&amp;)-ed with `n`.
-
-.or(n)
-------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -834,23 +788,7 @@ Return a new `bignum` with the instance value bitwise AND (&amp;)-ed with `n`.
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-      throw new TypeError('Unspecified operation for type ' +
-        (typeof num) + ' for ' + op)
-    }
-  }
-})
-
-BigNum.prototype.abs = function () {
-  return this.<span class="apidocCodeKeywordSpan">babs</span>()
-}
-
-BigNum.prototype.neg = function () {
-  return this.bneg()
-}
-
-BigNum.prototype.powm = function (num, mod) {
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -916,23 +854,7 @@ BigNum.prototype.powm = function (num, mod) {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  var x = parseInt(num.toString(), 10)
-  return BigNum.prototype.shiftRight.call(this, x)
-}
-}
-
-BigNum.prototype.cmp = function (num) {
-if (BigNum.isBigNum(num)) {
-  return this.<span class="apidocCodeKeywordSpan">bcompare</span>(num)
-} else if (typeof num === 'number') {
-  if (num &lt; 0) {
-    return this.scompare(num)
-  } else {
-    return this.ucompare(num)
-  }
-} else {
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -976,23 +898,7 @@ if (BigNum.isBigNum(num)) {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-     : BigNum(to).sub(this)
-    return x.brand0().add(this)
-  }
-}
-
-BigNum.prototype.invertm = function (mod) {
-  if (BigNum.isBigNum(mod)) {
-    return this.<span class="apidocCodeKeywordSpan">binvertm</span>(mod)
-  } else {
-    var x = BigNum(mod)
-    return this.binvertm(x)
-  }
-}
-
-BigNum.prime = function (bits, safe) {
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1014,22 +920,7 @@ BigNum.prime = function (bits, safe) {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
--------
-
-Return the Jacobi symbol (or Legendre symbol if `n` is prime) of the current
-`bignum` (= a) over `n`. Note that `n` must be odd and &gt;= 3. 0 &lt;= a &lt; n.
-
-Returns -1 or 1 as an int (NOT a bignum). Throws an error on failure.
-
-.<span class="apidocCodeKeywordSpan">bitLength</span>()
-------------
-
-Return the number of bits used to represent the current `bignum`.
-
-install
-=======
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1051,23 +942,7 @@ install
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  m = mod
-}
-
-if ((typeof num) === 'number') {
-  return this.umod(num, m)
-} else if ((typeof num) === 'string') {
-  var n = BigNum(num)
-  return this.<span class="apidocCodeKeywordSpan">bmod</span>(n, m)
-} else if (BigNum.isBigNum(num)) {
-  return this.bmod(num, m)
-}
-}
-
-BigNum.prototype.pow = function (num) {
-if (typeof num === 'number') {
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1111,23 +986,7 @@ if (typeof num === 'number') {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-})
-
-BigNum.prototype.abs = function () {
-return this.babs()
-}
-
-BigNum.prototype.neg = function () {
-return this.<span class="apidocCodeKeywordSpan">bneg</span>()
-}
-
-BigNum.prototype.powm = function (num, mod) {
-var m
-
-if ((typeof mod) === 'number' || (typeof mod) === 'string') {
-  m = BigNum(mod)
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1171,23 +1030,7 @@ if ((typeof mod) === 'number' || (typeof mod) === 'string') {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  m = mod
-}
-
-if ((typeof num) === 'number') {
-  return this.upowm(num, m)
-} else if ((typeof num) === 'string') {
-  var n = BigNum(num)
-  return this.<span class="apidocCodeKeywordSpan">bpowm</span>(n, m)
-} else if (BigNum.isBigNum(num)) {
-  return this.bpowm(num, m)
-}
-}
-
-BigNum.prototype.mod = function (num, mod) {
-var m
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1209,23 +1052,7 @@ var m
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-}
-
-BigNum.prototype.rand = function (to) {
-if (to === undefined) {
-  if (this.toString() === '1') {
-    return BigNum(0)
-  } else {
-    return this.<span class="apidocCodeKeywordSpan">brand0</span>()
-  }
-} else {
-  var x = BigNum.isBigNum(to)
-    ? to.sub(this)
-   : BigNum(to).sub(this)
-  return x.brand0().add(this)
-}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1247,23 +1074,7 @@ if (to === undefined) {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-BigNum.prototype.sqrt = function () {
-return this.bsqrt()
-}
-
-BigNum.prototype.root = function (num) {
-if (BigNum.isBigNum(num)) {
-  return this.<span class="apidocCodeKeywordSpan">broot</span>(num)
-} else {
-  return this.broot(num)
-}
-}
-
-BigNum.prototype.rand = function (to) {
-if (to === undefined) {
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1285,23 +1096,7 @@ if (to === undefined) {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    var x = BigNum(num)
-    return this['b' + name](x)
-  }
-}
-})
-
-BigNum.prototype.sqrt = function () {
-return this.<span class="apidocCodeKeywordSpan">bsqrt</span>()
-}
-
-BigNum.prototype.root = function (num) {
-if (BigNum.isBigNum(num)) {
-  return this.broot(num)
-} else {
-  return this.broot(num)
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1367,23 +1162,7 @@ if (BigNum.isBigNum(num)) {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-Return a new `bignum` with the absolute value of the instance.
-
-.neg()
-------
-
-Return a new `bignum` with the negative of the instance value.
-
-.<span class="apidocCodeKeywordSpan">cmp</span>(n)
--------
-
-Compare the instance value to `n`. Return a positive integer if `&gt; n`, a
-negative integer if `&lt; n`, and 0 if `== n`.
-
-.gt(n)
-------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1451,23 +1230,7 @@ negative integer if `&lt; n`, and 0 if `== n`.
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
----------
-
-```js
-var bignum = require('bignum');
-
-var b = bignum('782910138827292261791972728324982')
-.sub('182373273283402171237474774728373')
-.<span class="apidocCodeKeywordSpan">div</span>(8)
-;
-console.log(b);
-```
-
-***
-$ node simple.js
-&lt;Bignum 75067108192986261319312244199576&gt;
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1489,22 +1252,7 @@ $ node simple.js
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-.ge(n)
-------
-
-Return a boolean: whether the instance value is greater than or equal to n
-(`&gt;= n`).
-
-.<span class="apidocCodeKeywordSpan">eq</span>(n)
-------
-
-Return a boolean: whether the instance value is equal to n (`== n`).
-
-.lt(n)
-------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1547,23 +1295,7 @@ Return a boolean: whether the instance value is equal to n (`== n`).
 
   return BigNum(hex.join(''), 16)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-If you pass in a string you can set the base that string is encoded in.
-
-.toString(base=10)
-------------------
-
-Print out the `bignum` instance in the requested base as a string.
-
-bignum.<span class="apidocCodeKeywordSpan">fromBuffer</span>(buf, opts)
-----------------------------
-
-Create a new `bignum` from a `Buffer`.
-
-The default options are:
-
-```js
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1585,23 +1317,7 @@ The default options are:
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-.shiftRight(n)
---------------
-
-Return a new `bignum` of the value integer divided by
-`2^n`. Equivalent of the `&gt;&gt;` operator.
-
-.<span class="apidocCodeKeywordSpan">gcd</span>(n)
--------
-
-Return the greatest common divisor of the current `bignum` with `n` as a new
-`bignum`.
-
-.jacobi(n)
--------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1623,23 +1339,7 @@ Return the greatest common divisor of the current `bignum` with `n` as a new
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-negative integer if `&lt; n`, and 0 if `== n`.
-
-.gt(n)
-------
-
-Return a boolean: whether the instance value is greater than n (`&gt; n`).
-
-.<span class="apidocCodeKeywordSpan">ge</span>(n)
-------
-
-Return a boolean: whether the instance value is greater than or equal to n
-(`&gt;= n`).
-
-.eq(n)
-------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1661,22 +1361,7 @@ Return a boolean: whether the instance value is greater than or equal to n
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-.cmp(n)
--------
-
-Compare the instance value to `n`. Return a positive integer if `&gt; n`, a
-negative integer if `&lt; n`, and 0 if `== n`.
-
-.<span class="apidocCodeKeywordSpan">gt</span>(n)
-------
-
-Return a boolean: whether the instance value is greater than n (`&gt; n`).
-
-.ge(n)
-------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1698,23 +1383,7 @@ Return a boolean: whether the instance value is greater than n (`&gt; n`).
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-.powm(n, m)
------------
-
-Return a new `bignum` with the instance value raised to the `n`th power modulo
-`m`.
-
-.<span class="apidocCodeKeywordSpan">invertm</span>(m)
------------
-
-Compute the multiplicative inverse modulo `m`.
-
-.rand()
--------
-.rand(upperBound)
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1737,24 +1406,7 @@ Compute the multiplicative inverse modulo `m`.
   }
   return true
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-Note that endian doesn't matter when size = 1. If you wish to reverse the entire buffer byte by byte, pass size: 'auto
-'.
-
-bignum.prime(bits, safe=true)
------------------------------
-
-Generate a probable prime of length `bits`. If `safe` is true, it will be a "safe" prime of the form p=2p'+1 where
- p' is also prime.
-
-bignum.<span class="apidocCodeKeywordSpan">isBigNum</span>(num)
------------------------------
-
-Return true if `num` is identified as a bignum instance. Otherwise, return false.
-
-methods[1]
-==========
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1798,23 +1450,7 @@ methods[1]
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-do {
-  num = num.add(1)
-} while (!num.probPrime())
-return num
-}
-
-BigNum.prototype.isBitSet = function (n) {
-return this.<span class="apidocCodeKeywordSpan">isbitset</span>(n) === 1
-}
-
-BigNum.fromBuffer = function (buf, opts) {
-if (!opts) opts = {}
-
-var endian = { 1: 'big', '-1': 'little' }[opts.endian] ||
-  opts.endian || 'big'
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1836,22 +1472,7 @@ var endian = { 1: 'big', '-1': 'little' }[opts.endian] ||
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-.gcd(n)
--------
-
-Return the greatest common divisor of the current `bignum` with `n` as a new
-`bignum`.
-
-.<span class="apidocCodeKeywordSpan">jacobi</span>(n)
--------
-
-Return the Jacobi symbol (or Legendre symbol if `n` is prime) of the current
-`bignum` (= a) over `n`. Note that `n` must be odd and &gt;= 3. 0 &lt;= a &lt; n.
-
-Returns -1 or 1 as an int (NOT a bignum). Throws an error on failure.
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1873,23 +1494,7 @@ Returns -1 or 1 as an int (NOT a bignum). Throws an error on failure.
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-Return a boolean: whether the instance value is equal to n (`== n`).
-
-.lt(n)
-------
-
-Return a boolean: whether the instance value is less than n (`&lt; n`).
-
-.<span class="apidocCodeKeywordSpan">le</span>(n)
-------
-
-Return a boolean: whether the instance value is less than or equal to n
-(`&lt;= n`).
-
-.and(n)
--------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1911,22 +1516,7 @@ Return a boolean: whether the instance value is less than or equal to n
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-(`&gt;= n`).
-
-.eq(n)
-------
-
-Return a boolean: whether the instance value is equal to n (`== n`).
-
-.<span class="apidocCodeKeywordSpan">lt</span>(n)
-------
-
-Return a boolean: whether the instance value is less than n (`&lt; n`).
-
-.le(n)
-------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1948,23 +1538,7 @@ Return a boolean: whether the instance value is less than n (`&lt; n`).
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-.xor(n)
--------
-
-Return a new `bignum` with the instance value bitwise exclusive-OR (^)-ed with
-`n`.
-
-.<span class="apidocCodeKeywordSpan">mod</span>(n)
--------
-
-Return a new `bignum` with the instance value modulo `n`.
-
-`m`.
-.pow(n)
--------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1986,22 +1560,7 @@ Return a new `bignum` with the instance value modulo `n`.
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-```js
-// If 2**n-1 is prime, then (2**n-1) * 2**(n-1) is perfect.
-var bignum = require('bignum');
-
-for (var n = 0; n &lt; 100; n++) {
-    var p = bignum.pow(2, n).sub(1);
-    if (p.probPrime(50)) {
-        var perfect = p.<span class="apidocCodeKeywordSpan">mul</span>(bignum.pow(2, n - 1));
-        console.log(perfect.toString());
-    }
-}
-```
-
-***
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2045,22 +1604,7 @@ for (var n = 0; n &lt; 100; n++) {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-Return a new `bignum` containing the instance value integrally divided by `n`.
-
-.abs()
-------
-
-Return a new `bignum` with the absolute value of the instance.
-
-.<span class="apidocCodeKeywordSpan">neg</span>()
-------
-
-Return a new `bignum` with the negative of the instance value.
-
-.cmp(n)
--------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2104,23 +1648,7 @@ Return a new `bignum` with the negative of the instance value.
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-(`&lt;= n`).
-
-.and(n)
--------
-
-Return a new `bignum` with the instance value bitwise AND (&amp;)-ed with `n`.
-
-.<span class="apidocCodeKeywordSpan">or</span>(n)
-------
-
-Return a new `bignum` with the instance value bitwise inclusive-OR (|)-ed with
-`n`.
-
-.xor(n)
--------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2142,22 +1670,7 @@ Return a new `bignum` with the instance value bitwise inclusive-OR (|)-ed with
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-Generate the perfect numbers:
-
-```js
-// If 2**n-1 is prime, then (2**n-1) * 2**(n-1) is perfect.
-var bignum = require('bignum');
-
-for (var n = 0; n &lt; 100; n++) {
-    var p = bignum.<span class="apidocCodeKeywordSpan">pow</span>(2, n).sub(1);
-    if (p.probPrime(50)) {
-        var perfect = p.mul(bignum.pow(2, n - 1));
-        console.log(perfect.toString());
-    }
-}
-```
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2179,23 +1692,7 @@ for (var n = 0; n &lt; 100; n++) {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-`m`.
-.pow(n)
--------
-
-Return a new `bignum` with the instance value raised to the `n`th power.
-
-.<span class="apidocCodeKeywordSpan">powm</span>(n, m)
------------
-
-Return a new `bignum` with the instance value raised to the `n`th power modulo
-`m`.
-
-.invertm(m)
------------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2217,24 +1714,7 @@ Return a new `bignum` with the instance value raised to the `n`th power modulo
 
   return BigNum.uprime0(bits, !!safe)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    endian : 'big',
-    size : 1, // number of bytes in each word
-}
-```
-
-Note that endian doesn't matter when size = 1. If you wish to reverse the entire buffer byte by byte, pass size: 'auto
-'.
-
-bignum.<span class="apidocCodeKeywordSpan">prime</span>(bits, safe=true)
------------------------------
-
-Generate a probable prime of length `bits`. If `safe` is true, it will be a "safe" prime of the form p=2p'+1 where
- p' is also prime.
-
-bignum.isBigNum(num)
------------------------------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2256,23 +1736,7 @@ bignum.isBigNum(num)
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-```js
-// If 2**n-1 is prime, then (2**n-1) * 2**(n-1) is perfect.
-var bignum = require('bignum');
-
-for (var n = 0; n &lt; 100; n++) {
-    var p = bignum.pow(2, n).sub(1);
-    if (p.<span class="apidocCodeKeywordSpan">probPrime</span>(50)) {
-        var perfect = p.mul(bignum.pow(2, n - 1));
-        console.log(perfect.toString());
-    }
-}
-```
-
-***
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2294,23 +1758,7 @@ for (var n = 0; n &lt; 100; n++) {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-// Force uint32
-bits &gt;&gt;&gt;= 0
-
-return BigNum.uprime0(bits, !!safe)
-}
-
-BigNum.prototype.probPrime = function (reps) {
-var n = this.<span class="apidocCodeKeywordSpan">probprime</span>(reps || 10)
-return { 1: true, 0: false }[n]
-}
-
-BigNum.prototype.nextPrime = function () {
-var num = this
-do {
-  num = num.add(1)
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2332,22 +1780,7 @@ do {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-`m`.
-
-.invertm(m)
------------
-
-Compute the multiplicative inverse modulo `m`.
-
-.<span class="apidocCodeKeywordSpan">rand</span>()
--------
-.rand(upperBound)
------------------
-
-If `upperBound` is supplied, return a random `bignum` between the instance value
-and `upperBound - 1`, inclusive.
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2369,22 +1802,7 @@ and `upperBound - 1`, inclusive.
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-using [BN_is_prime_ex](http://www.openssl.org/docs/crypto/BN_generate_prime.html).
-
-.sqrt()
--------
-
-Return a new `bignum` that is the square root. This truncates.
-
-.<span class="apidocCodeKeywordSpan">root</span>(n)
--------
-
-Return a new `bignum` that is the `nth` root. This truncates.
-
-.shiftLeft(n)
--------------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2406,23 +1824,7 @@ Return a new `bignum` that is the `nth` root. This truncates.
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-}
-
-BigNum.prototype.cmp = function (num) {
-if (BigNum.isBigNum(num)) {
-  return this.bcompare(num)
-} else if (typeof num === 'number') {
-  if (num &lt; 0) {
-    return this.<span class="apidocCodeKeywordSpan">scompare</span>(num)
-  } else {
-    return this.ucompare(num)
-  }
-} else {
-  var x = BigNum(num)
-  return this.bcompare(x)
-}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2466,23 +1868,7 @@ if (BigNum.isBigNum(num)) {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-Return a new `bignum` that is the square root. This truncates.
-
-.root(n)
--------
-
-Return a new `bignum` that is the `nth` root. This truncates.
-
-.<span class="apidocCodeKeywordSpan">shiftLeft</span>(n)
--------------
-
-Return a new `bignum` that is the `2^n` multiple. Equivalent of the `&lt;&lt;`
-operator.
-
-.shiftRight(n)
---------------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2504,23 +1890,7 @@ operator.
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-.shiftLeft(n)
--------------
-
-Return a new `bignum` that is the `2^n` multiple. Equivalent of the `&lt;&lt;`
-operator.
-
-.<span class="apidocCodeKeywordSpan">shiftRight</span>(n)
---------------
-
-Return a new `bignum` of the value integer divided by
-`2^n`. Equivalent of the `&gt;&gt;` operator.
-
-.gcd(n)
--------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2542,22 +1912,7 @@ Return a new `bignum` of the value integer divided by
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-* certainly prime (true)
-* probably prime ('maybe')
-* certainly composite (false)
-
-using [BN_is_prime_ex](http://www.openssl.org/docs/crypto/BN_generate_prime.html).
-
-.<span class="apidocCodeKeywordSpan">sqrt</span>()
--------
-
-Return a new `bignum` that is the square root. This truncates.
-
-.root(n)
--------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2579,23 +1934,7 @@ Return a new `bignum` that is the square root. This truncates.
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-simple.js
----------
-
-```js
-var bignum = require('bignum');
-
-var b = bignum('782910138827292261791972728324982')
-.<span class="apidocCodeKeywordSpan">sub</span>('182373273283402171237474774728373')
-.div(8)
-;
-console.log(b);
-```
-
-***
-$ node simple.js
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2617,23 +1956,7 @@ $ node simple.js
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-.toNumber()
------------
-
-Turn a `bignum` into a `Number`. If the `bignum` is too big you'll lose
-precision or you'll get Â±`Infinity`.
-
-.<span class="apidocCodeKeywordSpan">toBuffer</span>(opts)
--------------
-
-Return a new `Buffer` with the data from the `bignum`.
-
-The default options are:
-
-```js
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2655,23 +1978,7 @@ The default options are:
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-or if x is a `bignum` instance``
-
-```js
-x.method(y, z)
-```
-
-.<span class="apidocCodeKeywordSpan">toNumber</span>()
------------
-
-Turn a `bignum` into a `Number`. If the `bignum` is too big you'll lose
-precision or you'll get Â±`Infinity`.
-
-.toBuffer(opts)
--------------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2693,23 +2000,7 @@ precision or you'll get Â±`Infinity`.
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-BigNum.prototype.inspect = function () {
-return '&lt;BigNum ' + this.toString(10) + '&gt;'
-}
-
-BigNum.prototype.toString = function (base) {
-var value
-if (base) {
-  value = this.<span class="apidocCodeKeywordSpan">tostring</span>(base)
-} else {
-  value = this.tostring()
-}
-if (base &gt; 10 &amp;&amp; typeof value === 'string') {
-  value = value.toLowerCase()
-}
-return value
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2731,23 +2022,7 @@ return value
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  return this['b' + op](num)
-} else if (typeof num === 'number') {
-  if (num &gt;= 0) {
-    return this['u' + op](num)
-  } else if (op === 'add') {
-    return this.usub(-num)
-  } else if (op === 'sub') {
-    return this.<span class="apidocCodeKeywordSpan">uadd</span>(-num)
-  } else {
-    x = BigNum(num)
-    return this['b' + op](x)
-  }
-} else if (typeof num === 'string') {
-  x = BigNum(num)
-  return this['b' + op](x)
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2769,22 +2044,7 @@ return value
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-BigNum.prototype.cmp = function (num) {
-  if (BigNum.isBigNum(num)) {
-    return this.bcompare(num)
-  } else if (typeof num === 'number') {
-    if (num &lt; 0) {
-      return this.scompare(num)
-    } else {
-      return this.<span class="apidocCodeKeywordSpan">ucompare</span>(num)
-    }
-  } else {
-    var x = BigNum(num)
-    return this.bcompare(x)
-  }
-}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2828,23 +2088,7 @@ BigNum.prototype.cmp = function (num) {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  return BigNum.prototype.shiftLeft.call(this, x)
-}
-}
-
-BigNum.prototype.shiftRight = function (num) {
-if (typeof num === 'number') {
-  if (num &gt;= 0) {
-    return this.<span class="apidocCodeKeywordSpan">udiv2exp</span>(num)
-  } else {
-    return this.shiftLeft(-num)
-  }
-} else {
-  var x = parseInt(num.toString(), 10)
-  return BigNum.prototype.shiftRight.call(this, x)
-}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2866,23 +2110,7 @@ if (typeof num === 'number') {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  if ((typeof mod) === 'number' || (typeof mod) === 'string') {
-    m = BigNum(mod)
-  } else if (BigNum.isBigNum(mod)) {
-    m = mod
-  }
-
-  if ((typeof num) === 'number') {
-    return this.<span class="apidocCodeKeywordSpan">umod</span>(num, m)
-  } else if ((typeof num) === 'string') {
-    var n = BigNum(num)
-    return this.bmod(n, m)
-  } else if (BigNum.isBigNum(num)) {
-    return this.bmod(num, m)
-  }
-}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2926,23 +2154,7 @@ if (typeof num === 'number') {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  return BigNum.prototype.pow.call(this, x)
-}
-}
-
-BigNum.prototype.shiftLeft = function (num) {
-if (typeof num === 'number') {
-  if (num &gt;= 0) {
-    return this.<span class="apidocCodeKeywordSpan">umul2exp</span>(num)
-  } else {
-    return this.shiftRight(-num)
-  }
-} else {
-  var x = parseInt(num.toString(), 10)
-  return BigNum.prototype.shiftLeft.call(this, x)
-}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -2964,23 +2176,7 @@ if (typeof num === 'number') {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  return this.bmod(num, m)
-}
-}
-
-BigNum.prototype.pow = function (num) {
-if (typeof num === 'number') {
-  if (num &gt;= 0) {
-    return this.<span class="apidocCodeKeywordSpan">upow</span>(num)
-  } else {
-    return BigNum.prototype.powm.call(this, num, this)
-  }
-} else {
-  var x = parseInt(num.toString(), 10)
-  return BigNum.prototype.pow.call(this, x)
-}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -3002,23 +2198,7 @@ if (typeof num === 'number') {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  if ((typeof mod) === 'number' || (typeof mod) === 'string') {
-    m = BigNum(mod)
-  } else if (BigNum.isBigNum(mod)) {
-    m = mod
-  }
-
-  if ((typeof num) === 'number') {
-    return this.<span class="apidocCodeKeywordSpan">upowm</span>(num, m)
-  } else if ((typeof num) === 'string') {
-    var n = BigNum(num)
-    return this.bpowm(n, m)
-  } else if (BigNum.isBigNum(num)) {
-    return this.bpowm(num, m)
-  }
-}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -3031,22 +2211,7 @@ if (typeof num === 'number') {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function uprime0() { [native code] }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  if (typeof safe === 'undefined') {
-    safe = true
-  }
-
-  // Force uint32
-  bits &gt;&gt;&gt;= 0
-
-  return BigNum.<span class="apidocCodeKeywordSpan">uprime0</span>(bits, !!safe)
-}
-
-BigNum.prototype.probPrime = function (reps) {
-  var n = this.probprime(reps || 10)
-  return { 1: true, 0: false }[n]
-}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -3068,23 +2233,7 @@ BigNum.prototype.probPrime = function (reps) {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-var x
-if (BigNum.isBigNum(num)) {
-  return this['b' + op](num)
-} else if (typeof num === 'number') {
-  if (num &gt;= 0) {
-    return this['u' + op](num)
-  } else if (op === 'add') {
-    return this.<span class="apidocCodeKeywordSpan">usub</span>(-num)
-  } else if (op === 'sub') {
-    return this.uadd(-num)
-  } else {
-    x = BigNum(num)
-    return this['b' + op](x)
-  }
-} else if (typeof num === 'string') {
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -3106,23 +2255,7 @@ if (BigNum.isBigNum(num)) {
     return bigi[name].apply(bigi, args)
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-.or(n)
-------
-
-Return a new `bignum` with the instance value bitwise inclusive-OR (|)-ed with
-`n`.
-
-.<span class="apidocCodeKeywordSpan">xor</span>(n)
--------
-
-Return a new `bignum` with the instance value bitwise exclusive-OR (^)-ed with
-`n`.
-
-.mod(n)
--------
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
